@@ -2,7 +2,7 @@
 Authors: Tom Chapman & John Sheehan
 
 ## Business Problem
-We (Tall Guy Outreach, LLC) are customer satisfaction consultants retained by BaceFook to gauge the community'ss reception to new functionality they are adding to their app. While BaceFook has great relationships with their largest enterprise customers, their app is used by individuals across the world. They need a reliable way to understand how individuals and small companies are responding to the new functionality without directly contacting each one.
+We (Tall Guy Outreach, LLC) are customer satisfaction consultants retained by BaceFook to gauge the community's reception to new functionality they are adding to their app. While BaceFook has great relationships with their largest enterprise customers, their app is used by individuals across the world. They need a reliable way to understand how individuals and small companies are responding to the new functionality without directly contacting each one.
 
 Our understanding is that the development team feels their new features could be controversial. While the features are aimed at making the app more appealing to enterprise customers, there was some concern during the development process that additional options might overwhelm existing users. The company closely monitors new installs of their app, so the impact of new features on new users is something they feel they have a good handle on. As a result, we will limit our review to community response as a whole.
 
@@ -17,7 +17,7 @@ The data contains a significant class imbalance, with only 4.5% (411 tweets) cla
 
 ![](images/sent_dist.png)
 
-Natural language processing requires a significant level of preprocessing prior to modelling, due to the variety of features in a dataset. These efforts are visible in the final notebook, and included the following steps:
+Natural language processing requires a significant level of preprocessing prior to modeling, due to the variety of features in a dataset. These efforts are visible in the final notebook, and included the following steps:
 - Removing Twitter handles & hyperlinks
 - Removing punctuation
 - Tokenizing and Lemmatizing the words in each tweet
@@ -32,7 +32,7 @@ After preprocessing was complete, we visualized the most common words in each se
 ![](images/Top%2010%20words%20in%20Neutral%20Tweets.png)
 
 ## Modeling 
-Our modelling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. We evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and we are interested in seeing how well a model predicts each of the individual classes. We then utilized a grid search to tune the hyperparameters of our best performing model in an attempt to further improve performance. The models are presented in order within the [completed notebook](bacefook_notebook.ipynb) from worst to best performing to demonstrate our iterative process. For the purposes of this summary, we will focus on the final random forest classifier model.
+Our modeling efforts involved an iterative process through different classifiers to find the one that performed best with default hyperparameters. We evaluated our model performance using accuracy scoring because the cost of an incorrect prediction is relatively low, and we are interested in seeing how well a model predicts each of the individual classes. We then utilized a grid search to tune the hyperparameters of our best performing model in an attempt to further improve performance. The models are presented in order within the [completed notebook](bacefook_notebook.ipynb) from worst to best performing to demonstrate our iterative process. For the purposes of this summary, we will focus on the final random forest classifier model.
 
 The following graph shows the accuracy score of each successive model, and highlights the superior performance of the random forest classifier.
 
